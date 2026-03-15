@@ -3,10 +3,12 @@ using namespace std;
 struct date{
 	int ngay, thang, nam;
 };
+//xac dinh nam nhuan
 bool nam_nhuan(int x)
 {
 	return (x%400 == 0 || ((x%4==0) && x % 100 != 0 ));
 }
+//so ngay trong tung thang
 int day_of_month(int month, int year)
 {
 	int dom;
@@ -50,6 +52,7 @@ void nhap(date &d)
     	cin.ignore(1000,'\n'); 
 	}
 }
+//tim ngay ke tiep
 void nextDay(date &d)
 {
 	int maxDay = day_of_month(d.thang, d.nam);
