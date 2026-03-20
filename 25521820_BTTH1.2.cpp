@@ -56,18 +56,20 @@ void nhap(date &d)
 void nextDay(date &d)
 {
 	int maxDay = day_of_month(d.thang, d.nam);
+	//nếu vẫn còn trong tháng
 	if(d.ngay < maxDay)
 	{
 		d.ngay ++;
 	}
+		//qua tháng mới
 	else {
 		d.ngay = 1;
-		if(d.thang == 12)
+		if(d.thang == 12) //nếu qua năm mới
 		{
 			d.thang = 1;
 			d.nam ++;
 		}
-		else d.thang++;
+		else d.thang++; // vẫn còn trong năm
 	}
 }
 void xuat(date d)
