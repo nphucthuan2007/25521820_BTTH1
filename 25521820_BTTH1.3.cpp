@@ -15,12 +15,12 @@ void nhap(Sinhvien &sv)
 		cin >> sv.diemtoan;
 	}
 	cout << "Nhap diem van: "; cin >> sv.diemvan;
-	while(sv.diemvan < 0 || sv.diemvan > 10)
+	while(sv.diemvan < 0 || sv.diemvan > 10) //đảm bảo đầu vào hợp lệ
 	{
 		cout << "Diem van khong hop le, vui long nhap lai: ";
 		cin >> sv.diemvan;
 	}
-	sv.dtb = (sv.diemtoan+sv.diemvan)/2.0;
+	sv.dtb = (sv.diemtoan+sv.diemvan)/2.0; //tính đtb
 }
 void xuat(Sinhvien sv)
 {
